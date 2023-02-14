@@ -1,13 +1,13 @@
 import './App.css';
 import Header from './Header';
-import HornedBeast from './Main';
+import Main from './Main';
 import Footer from './Footer';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <HornedBeast/>
+      <Main/>
       <Footer />
     </div>
   );
