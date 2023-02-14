@@ -34,7 +34,7 @@ class Main extends React.Component {
         return (
             <main>
                 {hornedBeastInfo.map(beast => (
-                <HornedBeast id={beast._id} title={beast.title} image_url={beast.image_url} description={beast.description} />
+                <HornedBeast key={beast._id} title={beast.title} image_url={beast.image_url} description={beast.description} />
                 ))}
             </main>
         )
