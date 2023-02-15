@@ -21,7 +21,11 @@ class Main extends React.Component {
                         <Row>
                         {data.map(beast => ( 
                             <Col xs={10} sm={8} md={6} lg={4}>
-                                <HornedBeast key={beast._id} title={beast.title} image_url={beast.image_url} description={beast.description} clicks/>
+                                <HornedBeast 
+                                key={beast._id} 
+                                title={beast.title} 
+                                image_url={beast.image_url} 
+                                description={beast.description} clicks/>
                             </Col>
                         ))}
                         </Row>
