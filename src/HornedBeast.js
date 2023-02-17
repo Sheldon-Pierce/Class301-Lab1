@@ -21,8 +21,7 @@ class HornedBeast extends React.Component {
             title: e.target.title,
             description: e.target.alt,
         }
-        this.props.chooseBeast(focused);
-        this.props.showModalClick();
+        this.props.setSelectBeast(focused);
     }
 
     render () {
@@ -32,7 +31,7 @@ class HornedBeast extends React.Component {
                 <img onClick={this.handleImgClick} style={{width:250, height:200}} src={this.props.image_url} alt={this.props.description} title={this.props.title}></img>,
                 <p>{this.props.description}</p>
                 <p><i class="fa-solid fa-heart"></i> : {this.state.heart}</p>
-            </div>
+                </div>
         )
     }
 
