@@ -4,9 +4,6 @@ import Col from "react-bootstrap/Col";
 
 
 class FilteredBeast extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
