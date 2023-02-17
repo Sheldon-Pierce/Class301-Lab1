@@ -4,13 +4,6 @@ import Button from 'react-bootstrap/Button'
 
 class SelectedBeast extends React.Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-
-        }
-    }
-
     render () {
         return (
             <Modal
@@ -18,20 +11,22 @@ class SelectedBeast extends React.Component {
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
+            show={this.props.showModal}
+            onHide={this.props.removeModal}
           >
             <Modal.Header closeButton>
               <Modal.Title id="contained-modal-title-vcenter">
-                {this.props.chooseBeast.title}
+                {this.props.beast?.title}
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <img style={{height:200, width:200}} src={this.props.chooseBeast.src} alt={this.props.chooseBeast.description}></img>
+              <img style={{height:200, width:200}} src={this.props.beast?.src} alt={this.props.beast?.description}></img>
               <p>
-                {this.props.chooseBeast.description}
+                {this.props.beast?.description}
               </p>
             </Modal.Body>
             <Modal.Footer>
-              <Button onClick={this.props.onHide}>Close</Button>
+              <Button onClick={this.props.removeModal}>Close</Button>
             </Modal.Footer>
           </Modal>
         )
